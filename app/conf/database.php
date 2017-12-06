@@ -15,7 +15,7 @@ return [
     // 服务器地址
     'hostname'        => '192.168.1.105',
     // 数据库名
-    'database'        => 'thinkphp',
+    'database'        => 'yulongmen',
     // 用户名
     'username'        => 'root',
     // 密码
