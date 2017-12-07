@@ -1,4 +1,16 @@
+li {list-style-type:none;}
+ul,form,ol {margin:0px;padding:0px;}
+a,button,input{outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-tap-highlight-color:transparent;}
+input,textarea,select {outline:none;}
+a:hover{text-decoration: none}
+
 .ylm-container{width:100%}
 .ylm-main{width:1349px;margin:0 auto}
-.ylm-header{height:120px;border:1px solid #f00}
-.logo{margin:7px 0 0 103px}
+.ylm-header{height:120px;border:1px solid #f00;clear: both}
+.logo{margin:7px 0 0 103px;float: left;}
+.nav{float:right}
+.nav li{width:115px;height:119px;float:left}
+.nav li a{line-height:119px;display:block;font-size:16px;color:#010000;font-family: "Microsoft Yahei";text-align: center}
+.nav li a:hover,.nav li a.active{background:#d2070a;color:#fff}
+.nav li ol{width:115px;background-color:rgba(210,7,10,0.7);z-index: 10;display:none}
+.nav li ol a{height:auto;line-height: normal;padding:10px 0;color:#fff;z-index: 11}

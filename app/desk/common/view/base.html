@@ -14,6 +14,23 @@
 <div class="ylm-container">
 {block name="body"}{/block}
 </div>
+<script src="__JS__login/jquery.js"></script>
+<script>
+    $(function(){
+        $(".nav>ul").children('li').on('mouseenter', function () {
+            $("ol").css('display', 'none');
+            $(this).children('ol').css('display', 'block');
+            if ($(this).children('a').data('active') == 0) {
+                $(this).children('a').addClass('active');
+            }
+        }).on('mouseleave', function () {
+            $("ol").css('display', 'none');
+            if ($(this).children('a').data('active') == 0) {
+                $(this).children('a').removeClass('active');
+            }
+        })
+    })
+</script>
 {block name="js"}{/block}
 </body>
 </html>
