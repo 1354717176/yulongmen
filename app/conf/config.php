@@ -143,7 +143,8 @@ return [
     'view_replace_str'       => [
         '__STATIC__'=>'/static/css/',
         '__IMG__'=>'/static/img/',
-        '__JS__'=>'/static/js/'
+        '__JS__'=>'/static/js/',
+        '__PLUGIN__'=>'/static/plugin/',
     ],
     // 默认跳转页面对应的模板文件
     'dispatch_success_tmpl'  => THINK_PATH . 'tpl' . DS . 'dispatch_jump.tpl',

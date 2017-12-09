@@ -1,16 +1,46 @@
 li {list-style-type:none;}
-ul,form,ol {margin:0px;padding:0px;}
+ul,form,ol,p,span,img {margin:0px;padding:0px;}
 a,button,input{outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-tap-highlight-color:transparent;}
 input,textarea,select {outline:none;}
 a:hover{text-decoration: none}
+.clear{clear: both}
 
 .ylm-container{width:100%}
 .ylm-main{width:1349px;margin:0 auto}
-.ylm-header{height:120px;border:1px solid #f00;clear: both}
+.ylm-header{height:120px;clear: both}
 .logo{margin:7px 0 0 103px;float: left;}
 .nav{float:right}
 .nav li{width:115px;height:119px;float:left}
 .nav li a{line-height:119px;display:block;font-size:16px;color:#010000;font-family: "Microsoft Yahei";text-align: center}
 .nav li a:hover,.nav li a.active{background:#d2070a;color:#fff}
-.nav li ol{width:115px;background-color:rgba(210,7,10,0.7);z-index: 10;display:none}
-.nav li ol a{height:auto;line-height: normal;padding:10px 0;color:#fff;z-index: 11}
+.nav li ol{width:115px;background-color:rgba(210,7,10,0.7);z-index: 999;display:none;position:relative}
+.nav li ol a{height:auto;line-height: normal;padding:10px 0;color:#fff;z-index: 999}
+
+.ylm-footer{width:100%;height:232px;background:#2b2b2b}
+.ylm-footer-main{width:1349px;margin:0 auto}
+.ylm-footer-tool{width:1189px;height:117px;margin:0 auto;border-bottom:1px solid #434343;padding-top:40px}
+.ylm-footer-nav{line-height: 114px}
+.ylm-footer-nav ul{text-align: center}
+.ylm-footer-nav ul li{display:inline-block}
+.ylm-footer-nav ul li a{display:block;color:#a0a0a0;font-family: "Microsoft Yahei";padding:0 20px}
+.ylm-footer-map{float:left;width:33.33%}
+.ylm-footer-map span{float:left;color:#fff;font-family: "Microsoft Yahei"}
+.ylm-footer-map p{position:relative;left:10px;top:-2px}
+
+.ylm-banner{width:1349px}
+
+.ylm-pro{height:600px;background: url("../img/pro-bg.png") no-repeat center}
+.ylm-pro-title{text-align: center;margin-top:50px}
+.ylm-pro-nav{margin-top:70px}
+.ylm-pro-nav li{width:24.5%;display: inline-block}
+.ylm-pro-nav li a{display:block;text-align: center}
+
+.ylm-about{height:800px;background: url("../img/about-us.jpg") no-repeat center;position:relative}
+.ylm-about-main{width:1201px;height:507px;background:#fff;border:1px solid #d2070a;position:absolute;left:74px;top:213px}
+.ylm-about-intro{width:399px;float:left}
+.ylm-about-img{width:800px;float:right}
+.ylm-about-img a{display:block;width:800px;height:505px}
+.ylm-about-img img {height:505px;float:right}
+.ylm-about-intro p{width:90%;margin:0 auto;line-height: 1.7}
+.ylm-about-intro p.ylm-about-title{font-size:18px;font-weight:500;font-family: "Microsoft Yahei";color:#333333;margin-top:30px}
+.ylm-about-intro p.ylm-about-txt{font-family: "Microsoft Yahei";color:#999999;margin-top:15px}

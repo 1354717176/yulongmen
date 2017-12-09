@@ -30,7 +30,89 @@
             </ul>
         </div>
     </div>
+    <div class="ylm-banner">
+        <div class="layui-carousel" id="test10">
+            <div carousel-item="">
+                <div><img src="__IMG__banner.png"></div>
+                <div><img src="__IMG__banner.png"></div>
+            </div>
+        </div>
+    </div>
+    <div class="ylm-pro">
+        <div class="ylm-pro-title"><a href="javascript:;"><img src="__IMG__pro-title.png" alt=""></a></div>
+        <div class="ylm-pro-nav">
+            <ul>
+                <li><a href="javascript:;"><img src="__IMG__pro-diliao.png" alt=""></a></li>
+                <li><a href="javascript:;"><img src="__IMG__pro-tesecai.png" alt=""></a></li>
+                <li><a href="javascript:;"><img src="__IMG__pro-chuanyu.png" alt=""></a></li>
+                <li><a href="javascript:;"><img src="__IMG__pro-zhuoyi.png" alt=""></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="ylm-about">
+        <div class="ylm-about-main">
+            <div class="ylm-about-intro">
+                <p class="ylm-about-title">寻味之旅</p>
+                <p class="ylm-about-txt">寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻</p>
+            </div>
+            <div class="ylm-about-img">
+                <a href=""><img src="__IMG__about-img.jpg" alt=""></a>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
+<div class="ylm-footer">
+    <div class="ylm-footer-main">
+        <div class="ylm-footer-tool">
+            <div class="ylm-footer-map">
+                <span><img src="__IMG__map.jpg" alt=""></span>
+                <span>
+                    <p class="map">地址</p>
+                    <p class="map-info">重庆九龙坡区科院四路xxxxx</p>
+                </span>
+            </div>
+            <div class="ylm-footer-map">
+                <span><img src="__IMG__tel.jpg" alt=""></span>
+                <span>
+                    <p class="map">电话</p>
+                    <p class="map-info">1502530xxxx</p>
+                </span>
+            </div>
+            <div class="ylm-footer-map">
+                <span><img src="__IMG__email.jpg" alt=""></span>
+                <span>
+                    <p class="map">邮箱</p>
+                    <p class="map-info">1354717xxxx@qq.com</p>
+                </span>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="ylm-footer-nav">
+            <ul>
+                <li><a href="">首页</a></li>
+                <li><a href="">品牌简介</a></li>
+                <li><a href="">新闻中心</a></li>
+                <li><a href="">产品中心</a></li>
+                <li><a href="">合作政策</a></li>
+                <li><a href="">联系我们</a></li>
+            </ul>
+        </div>
+    </div>
 </div>
 {/block}
-{block name="js"}{/block}
+{block name="js"}
+<script>
+    layui.use(['carousel', 'form'], function(){
+        var carousel = layui.carousel;
+        //图片轮播
+        carousel.render({
+            elem: '#test10'
+            ,width: '1349px'
+            ,height: '796px'
+            ,interval: 5000
+        });
+    })
+</script>
+{/block}
 
