@@ -44,3 +44,38 @@ a:hover{text-decoration: none}
 .ylm-about-intro p{width:90%;margin:0 auto;line-height: 1.7}
 .ylm-about-intro p.ylm-about-title{font-size:18px;font-weight:500;font-family: "Microsoft Yahei";color:#333333;margin-top:30px}
 .ylm-about-intro p.ylm-about-txt{font-family: "Microsoft Yahei";color:#999999;margin-top:15px}
+
+.ylm-hz{height:500px;}
+.ylm-hz-title{height:107px;text-align: center;margin-top:35px}
+.ylm-hz-nav ul{margin-top:70px}
+.ylm-hz-nav ul li{display: inline-block;width:33%;text-align: center;}
+.ylm-hz-nav ul li a{width:100%;height:100%;display:block}
+
+.ylm-news{margin-top:70px}
+.ylm-news-intro{}
+.ylm-news-intro .ylm-news-img,.ylm-news-intro .ylm-news-text{float:left}
+.ylm-news-intro .ylm-news-img{width:603px;height:201px}
+.ylm-news-intro .ylm-news-text{width:363px;height:202px;margin-left:54px}
+
+.ylm-news-list{margin-top:64px;margin-bottom:64px}
+.ylm-news-list-nav{width:30%;float:left;margin-left:5%}
+.ylm-news-list-nav:nth-child(1){margin-left: 0}
+.ylm-news-list-cate{width:100%;margin-bottom:25px}
+.ylm-news-list-cate a{display:block;width:106px;height:40px;background:#2b2b2b;color:#fff;text-align:center;line-height:40px;font-family: "Microsoft Yahei";border-radius:4px}
+.ylm-news-list-nav ul li{height:50px;line-height: 49px;border-bottom:1px dashed #e0e0e0;position:relative}
+.ylm-news-list-nav ul li a{color:#333333;line-height: 50px;position:absolute;left:0}
+.ylm-news-list-nav ul li span{;position:absolute;right:0}
+.ylm-news-list-nav ul li.last{border-bottom:none}
+
+.ylm-list-nav{width:1170px;margin:50px auto 0}
+.ylm-list{margin-bottom:40px}
+.ylm-list-text{width:675px;float:left;margin-left:20px}
+.ylm-list-nav a{display:block}
+.ylm-list-img{width:441px;float:right}
+.ylm-list-title{margin:50px 0 30px}
+.ylm-list-title a{font-size:20px}
+.ylm-list-desc a{font-size:14px;color:#999999;line-height: 1.7;letter-spacing: 1.2px}
+
+.ylm-new-position{width:550px;height:40px;margin-bottom:40px}
+.ylm-new-red{background:#d2070a;width:455px;float:left;line-height:40px;color:#fff;text-indent: 2em;border-radius: 3px 0 0 3px}
+.ylm-new-block{background:#2b2b2b;width:95px;height:40px;float:left;border-radius: 0 3px 3px 0}

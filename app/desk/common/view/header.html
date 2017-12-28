@@ -1,0 +1,21 @@
+<div class="ylm-main">
+<div class="ylm-header">
+    <div class="logo"><a href=""><img src="__IMG__logo.png" alt=""></a></div>
+    <div class="nav">
+        <ul>
+            <li><a href="" class="active" data-active="1">首页</a></li>
+            {volist name="cate" id="v"}
+            <li>
+                <a href='{:Url("")}' data-active="0">{$v.name}</a>
+                {notempty name="v.child"}
+                <ol>
+                    {volist name="v.child" id="v"}
+                    <a href="">{$v.name}</a>
+                    {/volist}
+                </ol>
+                {/notempty}
+            </li>
+            {/volist}
+        </ul>
+    </div>
+</div>

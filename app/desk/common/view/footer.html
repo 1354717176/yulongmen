@@ -1,0 +1,37 @@
+</div>
+<div class="ylm-footer">
+    <div class="ylm-footer-main">
+        <div class="ylm-footer-tool">
+            <div class="ylm-footer-map">
+                <span><img src="__IMG__map.jpg" alt=""></span>
+                <span>
+                    <p class="map">地址</p>
+                    <p class="map-info">{$web_address}</p>
+                </span>
+            </div>
+            <div class="ylm-footer-map">
+                <span><img src="__IMG__tel.jpg" alt=""></span>
+                <span>
+                    <p class="map">电话</p>
+                    <p class="map-info">{$web_tel}</p>
+                </span>
+            </div>
+            <div class="ylm-footer-map">
+                <span><img src="__IMG__email.jpg" alt=""></span>
+                <span>
+                    <p class="map">邮箱</p>
+                    <p class="map-info">{$web_email}</p>
+                </span>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="ylm-footer-nav">
+            <ul>
+                <li><a href="">首页</a></li>
+                {volist name="cate" id="v"}
+                <li><a href="">{$v.name}</a></li>
+                {/volist}
+            </ul>
+        </div>
+    </div>
+</div>

@@ -5,6 +5,7 @@ namespace app\console\cate\controller;
 use app\api\common\logic\Base;
 use app\api\console\cate\logic\Cate AS logicCate;
 use app\api\console\cate\service\Cate AS serviceCate;
+use Tree\Tree;
 
 /**
  * 分类列表页
@@ -26,12 +27,12 @@ class Lists extends Base
     public function index()
     {
 
-        $fields = 'id,name,sort,icon,parent_id,status';
+        $fields = 'id,name,icon,parent_id,status';
         $map = [
             'status' => ['in', '0,2'],
             'type'=>1,
         ];
-        $order = 'sort desc';
+        $order = 'id desc';
         $result = $this->logicCate->getList($fields, $map, $order);
 
         $list = $this->serviceCate->getTableDom($result);

@@ -1,0 +1,70 @@
+{extend name="../../common/view/base" /}
+{block name="body"}
+    <div class="ylm-banner">
+        <div class="layui-carousel" id="test10">
+            <div carousel-item="">
+                <div><img src="__IMG__banner.png"></div>
+                <div><img src="__IMG__banner.png"></div>
+            </div>
+        </div>
+    </div>
+<div class="ylm-news">
+    <div class="ylm-news-intro">
+        <div class="ylm-news-img"><a href="javascript:;"><img src="__IMG__news.jpg" alt=""></a></div>
+        <div class="ylm-news-text"><a href="javascript:;"><img src="__IMG__news-nav.jpg" alt=""></a></div>
+        <div class="clear"></div>
+    </div>
+    <div class="ylm-news-list">
+        <div class="ylm-new-position">
+            <div class="ylm-new-red">首页&nbsp;&nbsp;>&nbsp;&nbsp;资讯中心</div>
+            <div class="ylm-new-block"></div>
+            <div class="clear"></div>
+        </div>
+        <div>
+            <div class="ylm-news-list-nav">
+                <ul>
+                    <li><a href="">2017新闻联公布2017新闻联公布2017新闻联公</a><span>2017-10-31</span></li>
+                    <li><a href="">2017新闻联公布2017新闻联公布2017新闻联公</a><span>2017-10-31</span></li>
+                    <li><a href="">2017新闻联公布2017新闻联公布2017新闻联公</a><span>2017-10-31</span></li>
+                    <li><a href="">2017新闻联公布2017新闻联公布2017新闻联公</a><span>2017-10-31</span></li>
+                    <li class="last"><a href="">2017新闻联公布2017新闻联公布2017新闻联公</a><span>2017-10-31</span></li>
+                </ul>
+            </div>
+            <div class="ylm-news-list-nav">
+                <ul>
+                    <li><a href="">2017新闻联公布2017新闻联公布2017新闻联公</a><span>2017-10-31</span></li>
+                    <li><a href="">2017新闻联公布2017新闻联公布2017新闻联公</a><span>2017-10-31</span></li>
+                    <li><a href="">2017新闻联公布2017新闻联公布2017新闻联公</a><span>2017-10-31</span></li>
+                    <li><a href="">2017新闻联公布2017新闻联公布2017新闻联公</a><span>2017-10-31</span></li>
+                    <li class="last"><a href="">2017新闻联公布2017新闻联公布2017新闻联公</a><span>2017-10-31</span></li>
+                </ul>
+            </div>
+            <div class="ylm-news-list-nav">
+                <ul>
+                    <li><a href="">2017新闻联公布2017新闻联公布2017新闻联公</a><span>2017-10-31</span></li>
+                    <li><a href="">2017新闻联公布2017新闻联公布2017新闻联公</a><span>2017-10-31</span></li>
+                    <li><a href="">2017新闻联公布2017新闻联公布2017新闻联公</a><span>2017-10-31</span></li>
+                    <li><a href="">2017新闻联公布2017新闻联公布2017新闻联公</a><span>2017-10-31</span></li>
+                    <li class="last"><a href="">2017新闻联公布2017新闻联公布2017新闻联公</a><span>2017-10-31</span></li>
+                </ul>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
+</div>
+{/block}
+{block name="js"}
+<script>
+    layui.use(['carousel', 'form'], function(){
+        var carousel = layui.carousel;
+        //图片轮播
+        carousel.render({
+            elem: '#test10'
+            ,width: '1349px'
+            ,height: '300px'
+            ,interval: 5000
+        });
+    })
+</script>
+{/block}

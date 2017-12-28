@@ -54,9 +54,6 @@ class Cate
         }
         $htmlDom = "<tr>
                         <td>
-                            <input type='text' name='sort[\$id]' value='\$sort' class='form-control' style='width: 40px'>
-                        </td>
-                        <td>
                             \$id
                         </td>
                         <td>
@@ -96,5 +93,12 @@ class Cate
         $htmlDom = "<option value='\$id'\$selected>\$spacer \$name</option>";
         $tree->init($list);
         return $tree->get_tree(0, $htmlDom);
+    }
+
+    public function getArrayDom($result)
+    {
+        $tree = new Tree();
+        $tree->init($result);
+        return $tree->get_tree_array(0,'');
     }
 }

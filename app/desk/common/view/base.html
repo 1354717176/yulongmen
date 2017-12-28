@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>网站模板—食品饮料</title>
-    <meta name="keywords" content="网站模板—食品饮料">
-    <meta name="description" content="网站模板—食品饮料">
+    <title>{$web_title}</title>
+    <meta name="keywords" content="{$web_keywords}">
+    <meta name="description" content="{$web_description}">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,7 +13,65 @@
     <link rel="stylesheet" href="__PLUGIN__layui/css/layui.css">
 <body>
 <div class="ylm-container">
-{block name="body"}{/block}
+    <div class="ylm-main">
+        <div class="ylm-header">
+            <div class="logo"><a href=""><img src="__IMG__logo.png" alt=""></a></div>
+            <div class="nav">
+                <ul>
+                    <li><a href="" class="active" data-active="1">首页</a></li>
+                    {volist name="cate" id="v"}
+                    <li>
+                        <a href='{:Url("")}' data-active="0">{$v.name}</a>
+                        {notempty name="v.child"}
+                        <ol>
+                            {volist name="v.child" id="v"}
+                            <a href="">{$v.name}</a>
+                            {/volist}
+                        </ol>
+                        {/notempty}
+                    </li>
+                    {/volist}
+                </ul>
+            </div>
+        </div>
+    {block name="body"}{/block}
+    </div>
+<div class="ylm-footer">
+    <div class="ylm-footer-main">
+        <div class="ylm-footer-tool">
+            <div class="ylm-footer-map">
+                <span><img src="__IMG__map.jpg" alt=""></span>
+                <span>
+            <p class="map">地址</p>
+            <p class="map-info">{$web_address}</p>
+        </span>
+            </div>
+            <div class="ylm-footer-map">
+                <span><img src="__IMG__tel.jpg" alt=""></span>
+                <span>
+            <p class="map">电话</p>
+            <p class="map-info">{$web_tel}</p>
+        </span>
+            </div>
+            <div class="ylm-footer-map">
+                <span><img src="__IMG__email.jpg" alt=""></span>
+                <span>
+            <p class="map">邮箱</p>
+            <p class="map-info">{$web_email}</p>
+        </span>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="ylm-footer-nav">
+            <ul>
+                <li><a href="">首页</a></li>
+                {volist name="cate" id="v"}
+                <li><a href="">{$v.name}</a></li>
+                {/volist}
+            </ul>
+        </div>
+    </div>
+</div>
 </div>
 <script src="__JS__login/jquery.js"></script>
 <script src="__PLUGIN__layui/layui.js"></script>

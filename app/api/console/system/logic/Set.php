@@ -19,9 +19,11 @@ class Set
     public function save($param)
     {
         $scene=[1=>'set',2=>'detail'];
-        $result = $this->serviceSet->checkSetBase($param,$scene[$param['type']]);
-        if($result){
-            throw new Exception($result);
+        if(isset($scene[$param['type']])){
+            $result = $this->serviceSet->checkSetBase($param,$scene[$param['type']]);
+            if($result){
+                throw new Exception($result);
+            }
         }
 
         $data = [];

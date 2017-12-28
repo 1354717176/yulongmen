@@ -12,7 +12,12 @@
 // [ 应用入口文件 ]
 
 // 应用名称
-define('APP_NAME', 'desk');
+define('DOMAIN', $_SERVER['SERVER_NAME']);
+if(DOMAIN == 'yulongmen.yanghuan.com'){
+    define('APP_NAME', 'desk');
+}else{
+    define('APP_NAME', 'console');
+}
 
 // 加载框架引导文件
 require __DIR__ . '/thinkphp/start.php';
