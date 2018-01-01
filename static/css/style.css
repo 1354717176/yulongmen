@@ -79,3 +79,9 @@ a:hover{text-decoration: none}
 .ylm-new-position{width:550px;height:40px;margin-bottom:40px}
 .ylm-new-red{background:#d2070a;width:455px;float:left;line-height:40px;color:#fff;text-indent: 2em;border-radius: 3px 0 0 3px}
 .ylm-new-block{background:#2b2b2b;width:95px;height:40px;float:left;border-radius: 0 3px 3px 0}
+
+.about{margin:30px 0 0}
+.abot-main{width:960px;margin:0 auto;position:relative;z-index: 1}
+.about-title{font-size:20px;font-weight: bold}
+.about-content{font-family: "Microsoft YaHei";color:#696969;min-height:300px}
+.about-top{position:fixed;bottom:252px;right:13%;z-index: 999}

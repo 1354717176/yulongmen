@@ -1,0 +1,57 @@
+{extend name="../../common/view/base" /}
+{block name="body"}
+<div class="ylm-banner">
+    <div class="layui-carousel" id="test10">
+        <div carousel-item="">
+            <div><img src="__IMG__banner.png"></div>
+            <div><img src="__IMG__banner.png"></div>
+        </div>
+    </div>
+</div>
+<div class="about">
+    <div class="abot-main">
+        <div class="about-title">企业标志LOGO设计有哪些事项是需要注意的</div>
+        <div class="about-content"></div>
+        <div class="about-top"><a href="javascript:;" id="about-top"><img src="__IMG__top.jpg" alt=""></a></div>
+    </div>
+</div>
+{/block}
+{block name="js"}
+<script>
+    layui.use(['carousel', 'form'], function(){
+        var carousel = layui.carousel;
+        //图片轮播
+        carousel.render({
+            elem: '#test10'
+            ,width: '1349px'
+            ,height: '300px'
+            ,interval: 5000
+        });
+    })
+</script>
+<script>
+    $(function(){
+        var operate={
+            init:function () {
+                operate.bind();
+                operate.rolltop();
+            },
+            bind:function () {
+              $.extend({
+                  aboutTop:$('#about-top'),
+              })
+            },
+            rolltop:function () {
+                $.aboutTop.click(function () {
+                    $('html, body').animate({
+                        scrollTop: 0
+                    }, 500);
+                    return false;
+                });
+            }
+        }
+        operate.init();
+    })
+</script>
+{/block}
+
