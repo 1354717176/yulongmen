@@ -8,13 +8,22 @@
         </div>
     </div>
 </div>
-<div class="about">
-    <div class="abot-main">
-        <div class="about-title">企业标志LOGO设计有哪些事项是需要注意的</div>
-        <div class="about-content"></div>
-        <div class="about-top"><a href="javascript:;" id="about-top"><img src="__IMG__top.jpg" alt=""></a></div>
+{empty name="article"}
+    <div class="about">
+        <div class="abot-main">
+            <div class="about-title"></div>
+            <div class="about-content">内容不存在</div>
+        </div>
     </div>
-</div>
+{else}
+    <div class="about">
+        <div class="abot-main">
+            <div class="about-title">{$article.title}</div>
+            <div class="about-content">{$article.content}</div>
+            <div class="about-top"><a href="javascript:;" id="about-top"><img src="__IMG__top.jpg" alt=""></a></div>
+        </div>
+    </div>
+{/empty}
 {/block}
 {block name="js"}
 <script>

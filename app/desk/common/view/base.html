@@ -18,14 +18,26 @@
             <div class="logo"><a href=""><img src="__IMG__logo.png" alt=""></a></div>
             <div class="nav">
                 <ul>
-                    <li><a href="" class="active" data-active="1">首页</a></li>
+                    <li><a href="/" class="active" data-active="1">首页</a></li>
                     {volist name="cate" id="v"}
                     <li>
-                        <a href='{:Url("")}' data-active="0">{$v.name}</a>
+                        {if condition="in_array($v.id,[2,6,5,21])"}
+                        <a href='{:Url("/detail/about",["cat_id"=>$v.id],false,true)}' data-active="0">{$v.name}</a>
+                        {elseif condition="in_array($v.id,[4])"}
+                        <a href='{:Url("/article/lists",["cat_id"=>$v.id],false,true)}' data-active="0">{$v.name}</a>
+                        {else}
+                        <a href='{:Url("/article/lists/news",["cat_id"=>$v.id],false,true)}' data-active="0">{$v.name}</a>
+                        {/if}
                         {notempty name="v.child"}
                         <ol>
                             {volist name="v.child" id="v"}
+                            {if condition="in_array($v.id,[18,19,20,21])"}
+                            <a href='{:Url("/detail/about",["cat_id"=>$v.id],false,true)}'>{$v.name}</a>
+                            {elseif condition="in_array($v.id,[14,15,16,17])"}
+                            <a href='{:Url("/article/lists",["cat_id"=>$v.id],false,true)}' data-active="0">{$v.name}</a>
+                            {else}
                             <a href="">{$v.name}</a>
+                            {/if}
                             {/volist}
                         </ol>
                         {/notempty}

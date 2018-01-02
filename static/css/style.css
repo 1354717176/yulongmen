@@ -83,5 +83,5 @@ a:hover{text-decoration: none}
 .about{margin:30px 0 0}
 .abot-main{width:960px;margin:0 auto;position:relative;z-index: 1}
 .about-title{font-size:20px;font-weight: bold}
-.about-content{font-family: "Microsoft YaHei";color:#696969;min-height:300px}
+.about-content{font-family: "Microsoft YaHei";color:#696969;min-height:300px;margin-top:20px}
 .about-top{position:fixed;bottom:252px;right:13%;z-index: 999}
