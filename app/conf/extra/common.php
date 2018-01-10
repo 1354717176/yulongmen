@@ -24,7 +24,7 @@ function random($length, $chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghi
  * date:2017/10/25 20:55
  * @param $file 文件资源
  */
-function upload($file)
+function upload($file,$width=150,$height=150)
 {
     if ($file) {
         $image = \think\Image::open($file);
@@ -33,7 +33,7 @@ function upload($file)
             $imgInfo = $info->getFilename();
             $imgExt = $info->getExtension();
             $imgName = explode('.', $imgInfo);
-            $image->thumb(150, 150)->save(ROOT_PATH . 'static' . DS . 'upload' . DS . date('Ymd')  . DS .  $imgName[0] . '.thumb.' . $imgExt);
+            $image->thumb($width, $height)->save(ROOT_PATH . 'static' . DS . 'upload' . DS . date('Ymd')  . DS .  $imgName[0] . '.thumb.' . $imgExt);
             return ['code' => 0, 'msg' => '文件上传成功', 'data' => DS . 'static' . DS . 'upload' . DS . $info->getSaveName()];
         } else {
             return ['code' => 1, 'msg' => '文件上传失败', 'data' => $this->getError()];

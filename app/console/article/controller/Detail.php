@@ -53,7 +53,7 @@ class Detail extends Base
 
             $file = $this->request->file('img');
             if($file){
-                $imgPath = upload($file);
+                $imgPath = upload($file,441,238);
                 if ($imgPath['code']) {
                     return json($imgPath);
                 }

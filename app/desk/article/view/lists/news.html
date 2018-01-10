@@ -21,34 +21,37 @@
             <div class="clear"></div>
         </div>
         <div>
+            {notempty name="list1"}
             <div class="ylm-news-list-nav">
                 <ul>
-                    <li><a href="">2017新闻联公布2017新闻联公布2017新闻联公</a><span>2017-10-31</span></li>
-                    <li><a href="">2017新闻联公布2017新闻联公布2017新闻联公</a><span>2017-10-31</span></li>
-                    <li><a href="">2017新闻联公布2017新闻联公布2017新闻联公</a><span>2017-10-31</span></li>
-                    <li><a href="">2017新闻联公布2017新闻联公布2017新闻联公</a><span>2017-10-31</span></li>
-                    <li class="last"><a href="">2017新闻联公布2017新闻联公布2017新闻联公</a><span>2017-10-31</span></li>
+                    {volist name="list1" id="v" key="k"}
+                    <li {eq name="k" value="5"}class="last"{/eq} ><a href='{:Url("/detail/about/news",["id"=>$v["id"]],false,true)}'>{$v.title}</a><span>{$v.formate_create_time}</span></li>
+                    {/volist}
                 </ul>
             </div>
+            {/notempty}
+            {notempty name="list2"}
             <div class="ylm-news-list-nav">
                 <ul>
-                    <li><a href="">2017新闻联公布2017新闻联公布2017新闻联公</a><span>2017-10-31</span></li>
-                    <li><a href="">2017新闻联公布2017新闻联公布2017新闻联公</a><span>2017-10-31</span></li>
-                    <li><a href="">2017新闻联公布2017新闻联公布2017新闻联公</a><span>2017-10-31</span></li>
-                    <li><a href="">2017新闻联公布2017新闻联公布2017新闻联公</a><span>2017-10-31</span></li>
-                    <li class="last"><a href="">2017新闻联公布2017新闻联公布2017新闻联公</a><span>2017-10-31</span></li>
+                    {volist name="list2" id="v" key="k"}
+                    <li {eq name="k" value="5"}class="last"{/eq} ><a href='{:Url("/detail/about/news",["id"=>$v["id"]],false,true)}'>{$v.title}</a><span>{$v.formate_create_time}</span></li>
+                    {/volist}
                 </ul>
             </div>
+            {/notempty}
+            {notempty name="list3"}
             <div class="ylm-news-list-nav">
                 <ul>
-                    <li><a href="">2017新闻联公布2017新闻联公布2017新闻联公</a><span>2017-10-31</span></li>
-                    <li><a href="">2017新闻联公布2017新闻联公布2017新闻联公</a><span>2017-10-31</span></li>
-                    <li><a href="">2017新闻联公布2017新闻联公布2017新闻联公</a><span>2017-10-31</span></li>
-                    <li><a href="">2017新闻联公布2017新闻联公布2017新闻联公</a><span>2017-10-31</span></li>
-                    <li class="last"><a href="">2017新闻联公布2017新闻联公布2017新闻联公</a><span>2017-10-31</span></li>
+                    {volist name="list3" id="v" key="k"}
+                    <li {eq name="k" value="5"}class="last"{/eq} ><a href='{:Url("/detail/about/news",["id"=>$v["id"]],false,true)}'>{$v.title}</a><span>{$v.formate_create_time}</span></li>
+                    {/volist}
                 </ul>
             </div>
+            {/notempty}
             <div class="clear"></div>
+            <div class="page" style="text-align: center">
+                {$page}
+            </div>
         </div>
     </div>
 </div>

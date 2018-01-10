@@ -27,9 +27,15 @@
         </div>
         <div class="ylm-footer-nav">
             <ul>
-                <li><a href="">首页</a></li>
+                <li><a href="/">首页</a></li>
                 {volist name="cate" id="v"}
-                <li><a href="">{$v.name}</a></li>
+                {if condition="in_array($v.id,[2,6,5,21])"}
+                <li><a href='{:Url("/detail/about",["cat_id"=>$v.id],false,true)}'>{$v.name}</a></li>
+                {elseif condition="in_array($v.id,[4])"}
+                <li><a href='{:Url("/article/lists",["cat_id"=>$v.id],false,true)}' data-active="0">{$v.name}</a></li>
+                {else}
+                <li><a href='{:Url("/article/lists/news",["cat_id"=>$v.id],false,true)}' data-active="0">{$v.name}</a></li>
+                {/if}
                 {/volist}
             </ul>
         </div>

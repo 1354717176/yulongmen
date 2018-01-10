@@ -19,4 +19,15 @@ class About extends Deskbase
         $this->assign('article', $article);
         return $this->fetch();
     }
+
+    public function news(){
+        $catId = $this->request->param('id', 0);
+        $article = modelArticle::where('id', $catId)->find();
+        if (!is_null($article)) {
+            $content = modelArticleData::where('id', $article['id'])->value('content');
+            $article['content'] = $content;
+        }
+        $this->assign('article', $article);
+        return $this->fetch();
+    }
 }

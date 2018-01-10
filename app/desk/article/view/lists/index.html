@@ -22,45 +22,22 @@
         <img src="__IMG__b.jpg" alt="">
     </div>
     <div class="ylm-list-nav">
+        {notempty name="article"}
+        {volist name="article" id="v"}
         <div class="ylm-list">
             <div class="ylm-list-text">
-                <div class="ylm-list-title"><a href="">寻味之旅</a></div>
+                <div class="ylm-list-title"><a href='{:Url("/detail/about/news",["id"=>$v["id"]],false,true)}'>{$v.title}</a></div>
                 <div class="ylm-list-desc">
-                    <a href="">寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅</a>
+                    <a href='{:Url("/detail/about/news",["id"=>$v["id"]],false,true)}'>{$v.introduce}</a>
                 </div>
             </div>
-            <div class="ylm-list-img"><a href=""><img src="__IMG__list-img.jpg" alt=""></a></div>
+            <div class="ylm-list-img"><a href='{:Url("/detail/about/news",["id"=>$v["id"]],false,true)}'><img width="441" height="238" src="{$v.small_thumb}" alt=""></a></div>
             <div class="clear"></div>
         </div>
-        <div class="ylm-list">
-            <div class="ylm-list-text">
-                <div class="ylm-list-title"><a href="">寻味之旅</a></div>
-                <div class="ylm-list-desc">
-                    <a href="">寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅</a>
-                </div>
-            </div>
-            <div class="ylm-list-img"><a href=""><img src="__IMG__list-img.jpg" alt=""></a></div>
-            <div class="clear"></div>
-        </div>
-        <div class="ylm-list">
-            <div class="ylm-list-text">
-                <div class="ylm-list-title"><a href="">寻味之旅</a></div>
-                <div class="ylm-list-desc">
-                    <a href="">寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅</a>
-                </div>
-            </div>
-            <div class="ylm-list-img"><a href=""><img src="__IMG__list-img.jpg" alt=""></a></div>
-            <div class="clear"></div>
-        </div>
-        <div class="ylm-list">
-            <div class="ylm-list-text">
-                <div class="ylm-list-title"><a href="">寻味之旅</a></div>
-                <div class="ylm-list-desc">
-                    <a href="">寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅</a>
-                </div>
-            </div>
-            <div class="ylm-list-img"><a href=""><img src="__IMG__list-img.jpg" alt=""></a></div>
-            <div class="clear"></div>
+        {/volist}
+        {/notempty}
+        <div class="page" style="text-align: center">
+            {$page}
         </div>
     </div>
 </div>

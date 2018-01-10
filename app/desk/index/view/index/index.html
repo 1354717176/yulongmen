@@ -22,8 +22,10 @@
     <div class="ylm-about">
         <div class="ylm-about-main">
             <div class="ylm-about-intro">
-                <p class="ylm-about-title">寻味之旅</p>
-                <p class="ylm-about-txt">寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻味之旅寻</p>
+                {notempty name="about"}
+                <p class="ylm-about-title">{$about.title}</p>
+                <p class="ylm-about-txt">{$about.introduce}</p>
+                {/notempty}
             </div>
             <div class="ylm-about-img">
                 <a href=""><img src="__IMG__about-img.jpg" alt=""></a>
@@ -51,36 +53,36 @@
             <div class="clear"></div>
         </div>
         <div class="ylm-news-list">
+            {notempty name="list1"}
             <div class="ylm-news-list-nav">
-                <div class="ylm-news-list-cate"><a href="javascript:;">查看详情</a></div>
+                <div class="ylm-news-list-cate"><a href='{:Url("/article/lists/news",["catid"=>3],false,true)}'>查看详情</a></div>
                 <ul>
-                    <li><a href="">2017新闻联公布2017新闻联公布2017新闻联公</a><span>2017-10-31</span></li>
-                    <li><a href="">2017新闻联公布2017新闻联公布2017新闻联公</a><span>2017-10-31</span></li>
-                    <li><a href="">2017新闻联公布2017新闻联公布2017新闻联公</a><span>2017-10-31</span></li>
-                    <li><a href="">2017新闻联公布2017新闻联公布2017新闻联公</a><span>2017-10-31</span></li>
-                    <li class="last"><a href="">2017新闻联公布2017新闻联公布2017新闻联公</a><span>2017-10-31</span></li>
+                    {volist name="list1" id="v" key="k"}
+                    <li {eq name="k" value="5"}class="last"{/eq} ><a href='{:Url("/detail/about/news",["id"=>$v["id"]],false,true)}'>{$v.title}</a><span>{$v.create_time}</span></li>
+                    {/volist}
                 </ul>
             </div>
+            {/notempty}
+            {notempty name="list2"}
             <div class="ylm-news-list-nav">
-                <div class="ylm-news-list-cate"><a href="javascript:;">查看详情</a></div>
+                <div class="ylm-news-list-cate"><a href='{:Url("/article/lists/news",["catid"=>3],false,true)}'>查看详情</a></div>
                 <ul>
-                    <li><a href="">2017新闻联公布2017新闻联公布2017新闻联公</a><span>2017-10-31</span></li>
-                    <li><a href="">2017新闻联公布2017新闻联公布2017新闻联公</a><span>2017-10-31</span></li>
-                    <li><a href="">2017新闻联公布2017新闻联公布2017新闻联公</a><span>2017-10-31</span></li>
-                    <li><a href="">2017新闻联公布2017新闻联公布2017新闻联公</a><span>2017-10-31</span></li>
-                    <li class="last"><a href="">2017新闻联公布2017新闻联公布2017新闻联公</a><span>2017-10-31</span></li>
+                    {volist name="list2" id="v" key="k"}
+                    <li {eq name="k" value="5"}class="last"{/eq} ><a href="">{$v.title}</a><span>{$v.create_time}</span></li>
+                    {/volist}
                 </ul>
             </div>
+            {/notempty}
+            {notempty name="list3"}
             <div class="ylm-news-list-nav">
-                <div class="ylm-news-list-cate"><a href="javascript:;">查看详情</a></div>
+                <div class="ylm-news-list-cate"><a href='{:Url("/article/lists/news",["catid"=>3],false,true)}'>查看详情</a></div>
                 <ul>
-                    <li><a href="">2017新闻联公布2017新闻联公布2017新闻联公</a><span>2017-10-31</span></li>
-                    <li><a href="">2017新闻联公布2017新闻联公布2017新闻联公</a><span>2017-10-31</span></li>
-                    <li><a href="">2017新闻联公布2017新闻联公布2017新闻联公</a><span>2017-10-31</span></li>
-                    <li><a href="">2017新闻联公布2017新闻联公布2017新闻联公</a><span>2017-10-31</span></li>
-                    <li class="last"><a href="">2017新闻联公布2017新闻联公布2017新闻联公</a><span>2017-10-31</span></li>
+                    {volist name="list3" id="v" key="k"}
+                    <li {eq name="k" value="5"}class="last"{/eq} ><a href="">{$v.title}</a><span>{$v.create_time}</span></li>
+                    {/volist}
                 </ul>
             </div>
+            {/notempty}
             <div class="clear"></div>
         </div>
     </div>
